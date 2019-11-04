@@ -1,0 +1,15 @@
+/*
+ * 190
+ * ChX_MiddleValue
+ * ChX_MiddleValue.java
+ * E Miller
+ */ 
+
+import java.util.Scanner;
+
+public class ChX_MiddleValue
+{
+  public static int readint(String s)
+  {
+    Scanner kybd = new Scanner(System.in);
+    

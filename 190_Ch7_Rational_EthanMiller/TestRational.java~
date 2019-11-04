@@ -1,0 +1,37 @@
+/*
+ * 190 
+ * Ch7_TestRational
+ * Ch7_TestRational.java
+ * E Miller
+ */
+public class TestRational
+{
+  public static void main (String [] args)
+  {
+    Rational r1 = new Rational(8,4);
+    Rational r2 = new Rational(1,2);
+    
+    
+    System.out.println(r1);
+    System.out.println(r2);
+    
+    if(r1.equals(r2) == true)
+      System.out.println("Equal Fractions");
+    else
+      System.out.println("Unequal Fractions");
+    
+    //r1.add(r2);
+    //System.out.println(r1);
+    //System.out.println(r2);
+    
+   r1.mult(r2);
+   System.out.println(r1);
+   System.out.println(r2);
+      
+    double k = r1.toDouble();
+    System.out.println(k);
+    
+     r1.reduce();
+     System.out.println(r1);
+  }
+}

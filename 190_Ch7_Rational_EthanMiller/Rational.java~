@@ -1,0 +1,99 @@
+/*
+ * 190 
+ * Ch7_Rational
+ * Ch7_Rational.java
+ * E Miller
+ */
+public class Rational
+{
+  public int x;
+  public int y;
+  
+  //Constructor
+  public Rational()
+  { }
+    
+  public Rational(int a, int b)
+  {
+    x = a;
+    y = b;
+    
+  }
+  
+  public boolean equals( Rational r2)
+  {
+   return (this.x == r2.x) && (this.y == r2.y);
+      
+      
+      
+  }
+  
+  public void add(Rational r2)
+  {
+    if(this.y == r2.y)
+    {
+    this.x += r2.x;
+    this.y += r2.y;
+    }
+    else 
+    {
+      int newN1 = this.x * r2.y;
+      int newD1 = this.y * r2.y;
+      int newN2 = this.y * r2.x;
+      int newD2 = this.y * r2.y;
+      this.x = newN1 + newN2;
+      this.y = newD2;
+    }
+       
+    
+  }
+  
+  public void mult(Rational r2)
+  {
+    this.x = this.x * r2.x;
+    this.y = this.y * r2.y;
+   
+  }
+  
+  public String toString()
+  {
+    
+    return  x + "/" + y;
+  }
+  
+  public double toDouble()
+  {
+    
+  double d = ((double)this.x/this.y);
+  return d;
+  }
+  
+  public int getGCD()
+  {
+    int gcd = 0;
+      for (int i = 1; i <= this.x; i++)
+      {
+       if ((this.x % i == 0) && (this.y % i == 0)) 
+       {
+        gcd = i;
+       }
+      }
+      return gcd; 
+  }
+  
+  public void reduce()
+  {
+    int z = this.getGCD();
+     if(x < y)
+     {
+        x = x / z;
+        y = y / z;
+     }
+     else if(x > y)
+     {
+       x = x / z;
+       y = y / z;
+     }
+  }
+}
+    

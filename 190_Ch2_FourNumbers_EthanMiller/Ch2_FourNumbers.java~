@@ -1,0 +1,18 @@
+/*
+ * 190
+ * Ch2_FourNumbers
+ * Ch2_FourNumbers.java
+ * E Miller,
+ */
+ public class Ch2_FourNumbers
+ {
+   public static void main(String[] args)
+   {
+    int a = 10;
+    int b = 12;
+    int c = 15;
+    int d = 17;
+    System.out.println("The Sum of a+b+c+d is: " + (a + b + c + d));
+    System.out.println("The Product of a*b*c*d is: " + (a  * b * c * d));
+   }
+ }
